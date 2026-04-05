@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --font-syne:      'Syne', sans-serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-dm-mono:   'DM Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #E9E4DC;
+  color: #1e1c2b;
+  font-family: var(--font-cormorant);
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body { cursor: auto; }
+  #cursor, #cursor-ring { display: none; }
+}
+
+/* Cursor */
+#cursor {
+  width: 10px; height: 10px;
+  background: #3A3456;
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s, background 0.2s, width 0.2s, height 0.2s;
+}
+#cursor-ring {
+  width: 36px; height: 36px;
+  border: 1.5px solid #3A3456;
+  border-radius: 50%;
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 9998;
+  transform: translate(-50%, -50%);
+  opacity: 0.55;
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+}
+
+/* Scroll progress */
+#scroll-progress {
+  position: fixed; top: 0; left: 0; height: 2px;
+  background: linear-gradient(90deg, #BAC6B8, #8BA794, #3A3456);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* Grid bg utility */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(58,52,86,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58,52,86,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
