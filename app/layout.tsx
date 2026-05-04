@@ -6,6 +6,7 @@ import Footer from "@/components/ui/Footer";
 import Cursor from "@/components/ui/Cursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { siteConfig } from "@/lib/data";
+import { Analytics } from '@vercel/analytics/react';
 
 const syne = Syne({
   subsets: ["latin"],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
