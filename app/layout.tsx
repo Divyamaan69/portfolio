@@ -6,6 +6,8 @@ import Footer from "@/components/ui/Footer";
 import Cursor from "@/components/ui/Cursor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { siteConfig } from "@/lib/data";
+import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const syne = Syne({
   subsets: ["latin"],
@@ -54,6 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
+        <GoogleAnalytics gaId="G-7B21KX479G" />
       </body>
     </html>
   );
