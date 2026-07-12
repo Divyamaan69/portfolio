@@ -7,7 +7,7 @@ export default function Footer() {
   const pathname = usePathname();
   const isDark = pathname === "/contact";
 
-  const bg = isDark ? "bg-[#3A3456] border-white/10" : "bg-bg2 border-border";
+  const bg = isDark ? "bg-[#3A5A40] border-white/10" : "bg-bg2 border-border";
   const textColor = isDark ? "text-[rgba(233,228,220,0.4)]" : "text-muted";
   const linkColor = isDark ? "text-[rgba(233,228,220,0.4)] hover:text-[#E9E4DC]"
     : "text-muted hover:text-pri";

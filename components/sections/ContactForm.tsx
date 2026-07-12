@@ -22,11 +22,11 @@ export default function ContactForm() {
     };
 
     return (
-        <section className="min-h-screen pt-36 pb-24 px-8 md:px-16" style={{ background: "#3A3456" }}>
+        <section className="min-h-screen pt-36 pb-24 px-8 md:px-16" style={{ background: "#3A5A40" }}>
 
             <style>{`
-        #cursor { background: #8BA794 !important; }
-        #cursor-ring { border-color: #8BA794 !important; }
+        #cursor { background: #A3B18A !important; }
+#cursor-ring { border-color: #A3B18A !important; }
       `}</style>
 
             <div className="max-w-6xl mx-auto">
