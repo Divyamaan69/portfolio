@@ -6,13 +6,20 @@
 
 
 :root {
-  --font-syne:      'Syne', sans-serif;
+  --font-syne: 'Syne', sans-serif;
   --font-cormorant: 'Cormorant Garamond', serif;
-  --font-dm-mono:   'DM Mono', monospace;
+  --font-dm-mono: 'DM Mono', monospace;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: #E9E4DC;
@@ -25,26 +32,41 @@ body {
 }
 
 @media (pointer: coarse) {
-  body { cursor: auto; }
-  #cursor, #cursor-ring { display: none; }
+  body {
+    cursor: auto;
+  }
+
+  #cursor,
+  #cursor-ring {
+    display: none;
+  }
 }
 
 /* Cursor */
 #cursor {
-  width: 10px; height: 10px;
-  background: #3A3456;
+  width: 10px;
+  height: 10px;
+  background: #3A5A40;
   border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
   transform: translate(-50%, -50%);
   transition: transform 0.12s, background 0.2s, width 0.2s, height 0.2s;
 }
+
 #cursor-ring {
-  width: 36px; height: 36px;
-  border: 1.5px solid #3A3456;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid #3A5A40;
   border-radius: 50%;
-  position: fixed; top: 0; left: 0;
-  pointer-events: none; z-index: 9998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
   transform: translate(-50%, -50%);
   opacity: 0.55;
   transition: width 0.3s, height 0.3s, border-color 0.3s;
@@ -52,7 +74,10 @@ body {
 
 /* Scroll progress */
 #scroll-progress {
-  position: fixed; top: 0; left: 0; height: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
   background: linear-gradient(90deg, #BAC6B8, #8BA794, #3A3456);
   z-index: 200;
   transition: width 0.1s linear;
@@ -61,7 +86,7 @@ body {
 /* Grid bg utility */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(58,52,86,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(58,52,86,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(58, 52, 86, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(58, 52, 86, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }

@@ -84,8 +84,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 50% 50% at 90% 10%, rgba(139,167,148,0.13) 0%, transparent 70%),
-            radial-gradient(ellipse 35% 45% at 5% 90%, rgba(58,52,86,0.06) 0%, transparent 60%)`,
+            radial-gradient(ellipse 50% 50% at 90% 10%, rgba(163,177,138,0.18) 0%, transparent 70%),
+radial-gradient(ellipse 35% 45% at 5% 90%, rgba(58,90,64,0.07) 0%, transparent 60%)`,
         }} />
       <div className="absolute inset-0 z-0 grid-bg pointer-events-none" />
 

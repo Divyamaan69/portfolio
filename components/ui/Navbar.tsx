@@ -25,7 +25,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  const bg = isDark ? "bg-[#3A3456]" : "bg-bg/85 backdrop-blur-md";
+  const bg = isDark ? "bg-[#3A5A40]" : "bg-bg/85 backdrop-blur-md";
   const border = scrolled
     ? isDark ? "border-b border-white/10" : "border-b border-border"
     : "border-b border-transparent";
